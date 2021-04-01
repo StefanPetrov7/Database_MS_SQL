@@ -19,7 +19,7 @@ CREATE TABLE Persons
 )
 
 -- Insering Values into the tables 
--- Fist in Passports, passports ID column is skipped since the PK will be autoaticaly given startig from 101.
+-- First in Passports, passports ID column is skipped since the PK will be automatically given startig from 101.
 
 INSERT INTO Passports VALUES
     ('N34FG21B'),
@@ -27,7 +27,7 @@ INSERT INTO Passports VALUES
     ('ZE657QP2')
 
 
--- Inserting VALUES into Persons PK is skipped again since it will be automaticaly given, same as for passports table.
+-- Inserting VALUES into Persons PK is skipped again since it will be automatically given, same as for passports table.
 
 INSERT INTO Persons VALUES
     ('Roberto',43300.00,102),
