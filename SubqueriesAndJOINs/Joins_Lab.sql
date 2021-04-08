@@ -15,7 +15,7 @@ FROM Employees
 JOIN Addresses ON Addresses.AddressID = Employees.AddressID   -- => Relation FK with PK 
 JOIN Towns ON Towns.TownID = Addresses.TownID
 
--- WHERE, ORDER BY can be used same as witout JOIN
+-- WHERE, ORDER BY can be used same as without JOIN
 
 SELECT * 
 FROM Employees
@@ -74,7 +74,7 @@ JOIN Towns t ON a.TownID = t.TownID
 ORDER BY e.FirstName, e.LastName 
 
 -- => LEFT JOIN 
--- If one of the joins is selected as LEFT, this should be applied for the rest of the until the end of the query, or the rows can be lost again.
+-- If one of the joins is selected as LEFT, this should be applied for the rest, until the end of the query, or the rows can be lost again.
 
 SELECT  TOP(50)
     e.FirstName AS [First Name], 
