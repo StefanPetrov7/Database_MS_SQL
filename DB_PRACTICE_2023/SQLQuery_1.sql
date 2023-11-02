@@ -44,16 +44,4 @@ INSERT INTO Minions (Id,Name, AGE, TownId) VALUES
 
 ------------------------------------------
 
--- Minions
--- Id	Name	Age	TownId
--- 1	Kevin	22	1
--- 2	Bob	15	3
--- 3	Steward	NULL	2
-
--- Towns
--- Id	Name
--- 1	Sofia
--- 2	Plovdiv
--- 3	Varna
-
 
