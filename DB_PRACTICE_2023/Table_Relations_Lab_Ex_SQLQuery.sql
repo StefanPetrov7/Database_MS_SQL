@@ -181,6 +181,8 @@ CREATE TABLE StudentsExams
 	[StudentID] INT REFERENCES Students(StudentID), -- -> references to PK from Students table
 	[ExamID] INT REFERENCES Exams(ExamID), -- -+ references to PK from Exams table 
 	CONSTRAINT PK_StudentExams PRIMARY KEY(StudentID, ExamID)  -- -> composite primary key 
+        -- ->CONSTRAINT FK_StudentID FOREIGN KEY(StudentID) REFERENCES Students(StudentID), -- -> alternative code foradding FK
+        -- -> CONSTRAINT FK_ExamID FOREIGN KEY(ExamID) REFERENCES Exams(ExamID) -- -> alternative code foradding FK
 )
 
 INSERT INTO StudentsExams(StudentID, ExamID) VALUES
