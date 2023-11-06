@@ -212,3 +212,55 @@ INSERT INTO Teachers(TeacherID, [Name], ManagerID) VALUES
 	(105, 'Mark', 101),
 	(106, 'Greta', 101)
 
+-- ->  Online Store Database
+
+CREATE DATABASE OnLineStore
+
+CREATE TABLE Cities
+(
+	[CityID] INT PRIMARY KEY IDENTITY,
+	[Name] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Customers
+(
+	[CustomerID] INT PRIMARY KEY IDENTITY,
+	[Name] VARCHAR(50) NOT NULL,
+	[Birthday] DATE NOT NULL,
+	[CityID] INT,
+	CONSTRAINT FK_CustomersCities
+	FOREIGN KEY (CityID)
+	REFERENCES Cities(CityID)
+)
+
+CREATE TABLE Orders
+(
+	[OrderID] INT  PRIMARY KEY IDENTITY,
+	[CustomerID] INT,
+	CONSTRAINT FK_OrdersCustomers
+	FOREIGN KEY (CustomerID)
+	REFERENCES Customers(CustomerID)
+)
+
+CREATE TABLE ItemTypes
+(
+	[ItemTypeID] INT PRIMARY KEY IDENTITY,
+	[Name] VARCHAR(50)
+)
+
+CREATE TABLE Items
+(
+	[ItemID] INT  PRIMARY KEY IDENTITY, 
+	[Name] VARCHAR(50) NOT NULL,
+	[ItemTypeID] INT,
+	CONSTRAINT FK_ItemsItemsTypes
+	FOREIGN KEY (ItemTypeID)
+	REFERENCES ItemTypes(ItemTypeID)
+)
+
+CREATE TABLE OrderItems
+(
+	[OrderID] INT FOREIGN KEY REFERENCES Orders(OrderID),
+	[ItemID] INT FOREIGN KEY REFERENCES Items(ItemID),
+	CONSTRAINT PK_OrderItems PRIMARY KEY (OrderID, ItemID)
+)
