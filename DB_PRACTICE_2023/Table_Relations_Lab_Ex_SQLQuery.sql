@@ -1,4 +1,4 @@
--- -> Table relations lab exercises 
+-- -> Table relations lab exercises    
 
 CREATE DATABASE CoursesTest
 
