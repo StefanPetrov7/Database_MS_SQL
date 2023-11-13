@@ -293,8 +293,3 @@ WHERE [Row Number] % 2 = 1
 
 
 SELECT * FROM dbo.ufn_CashInUsersGames('Love in a mist')
-
-
-
-
-
